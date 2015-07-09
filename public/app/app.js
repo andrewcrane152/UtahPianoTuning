@@ -1,10 +1,10 @@
-var app = angular.module('tuneMyPiano', ['ngRoute', 'ui.bootstrap'])
+var app = angular.module('tuneMyPiano', ['ngRoute'])
 
 app.config(function($routeProvider){
 	console.log('app loaded');
 	$routeProvider
 	.when('/intro', {
-		templateUrl: 'views/intro/intro.html',
+		templateUrl: 'app/views/intro.html',
 		controller: 'introCtrl',
 		resolve: {
 			test: function(){
@@ -13,12 +13,12 @@ app.config(function($routeProvider){
 		}
 	})
 	.when('/request', {
-		templateUrl: 'views/request/request.html',
+		templateUrl: 'app/views/request.html',
 		controller: 'requestCtrl'
 	})
 
 	.when('/claim', {
-		templateUrl: 'views/claim/claim2.html',
+		templateUrl: 'app/views/claim.html',
 		controller: 'claimCtrl',
 		resolve: {
 			getLeads: function($q, mainService){
@@ -34,7 +34,7 @@ app.config(function($routeProvider){
 	})	
 
 	.when('/register', {
-		templateUrl: 'app/views/register/register.html',
+		templateUrl: 'app/views/register.html',
 		controller: 'registerCtrl'
 	})
 
