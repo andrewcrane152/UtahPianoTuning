@@ -1,0 +1,27 @@
+{
+  "name": "utahpianotuning",
+  "version": "1.0.0",
+  "description": "Tune My Piano",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewcrane152/UtahPianoTuning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.1",
+    "mongoose": "^4.0.6",
+    "sendgrid": "^1.8.0"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewcrane152/UtahPianoTuning/issues"
+  },
+  "homepage": "https://github.com/andrewcrane152/UtahPianoTuning#readme"
+}

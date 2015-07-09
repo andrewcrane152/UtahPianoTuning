@@ -1,0 +1,72 @@
+<div>
+	<div>
+		<p>
+			Fill out this form to register as a Piano Technician with Tune My Piano.
+		</p>
+	</div>
+	<form>
+		<fieldset class="requestTuning">
+			<legend>Contact Information: </legend>
+			<span>*All fields Required:</span>
+			<div class="contactInfo">
+				<div>First Name: <input name="contactInput" ng-model="newTechnician.firstName" type="text" placeholder="First Name" required></div>
+				<div>Last Name: <input name="contactInput" ng-model="newTechnician.lastName" type="text" placeholder="Last Name" required></div>
+				<div>Address: <input name="contactInput" ng-model="newTechnician.address" type="text" placeholder="Address" required></div>
+				<div>City: <input name="contactInput" ng-model="newTechnician.city" type="text" placeholder="City" required></div>
+				<div>State: <input name="contactInput" ng-model="newTechnician.state" type="text" placeholder="State" required></div>
+				<div>Zip: <input name="contactInput" ng-model="newTechnician.zip" type="text" placeholder="Zip" required></div>
+				<div>Phone: <input name="contactInput" ng-model="newTechnician.phone" type="text" placeholder="Phone" required></div>
+				<div>Email: <input name="contactInput" ng-model="newTechnician.email" type="email" placeholder="Email" required></div>
+			</div>
+		</fieldset>
+		<fieldset class="requestTuning">
+			<legend>Select the work your are able to perform: </legend>
+			<span>Select all that aply.  You will receive email notifications when new service requests are submitted that match your preferences.</span>
+			<div class="pianoInfo">
+			
+				<div class="pianoKind">
+					<span>Piano types</span> <br>
+					<form>
+					<input ng-model="newTechnician.pianoKindGrand" type="checkbox"> Grand
+					<input ng-model="newTechnician.pianoKindConsole" type="checkbox"> Console
+					<input ng-model="newTechnician.pianoKindSpinet" type="checkbox"> Spinet
+					<input ng-model="newTechnician.pianoKindOldUpright" type="checkbox"> Old Upright
+					</form>
+				</div>
+						
+				<div class="workNeeded">
+					<span>Type of Work You Perform</span> <br>
+					<input ng-model="newTechnician.tuning" type="checkbox"> Tuning
+					<input ng-model="newTechnician.pitchRaise" type="checkbox"> Pitch Raise
+					<input ng-model="newTechnician.repairs" type="checkbox"> Repairs
+					<input ng-model="newTechnician.internalCleaning" type="checkbox"> Internal Cleaning
+					<input ng-model="newTechnician.regulation" type="checkbox"> Regulation
+					<input ng-model="newTechnician.purchaseConsult" type="checkbox"> Purchase Consult
+					<input ng-model="newTechnician.estimate" type="checkbox"> Estimate
+					<input ng-model="newTechnician.appraisal" type="checkbox"> Appraisal
+				</div>
+				
+				<div class="utahCounties">
+					<span>Counties You Service</span> <br>
+					<fieldset>
+					<legend>Utah</legend>
+					<input ng-model="newTechnician.cntyBoxElder" type="checkbox" value="Box Elder"> Box Elder
+					<input ng-model="newTechnician.cntyCache" type="checkbox" value="Cache"> Cache
+					<input ng-model="newTechnician.cntyDavis" type="checkbox" value="Davis"> Davis
+					<input ng-model="newTechnician.cntyJuab" type="checkbox" value="Juab"> Juab
+					<input ng-model="newTechnician.cntyMorgan" type="checkbox" value="Morgan"> Morgan
+					<input ng-model="newTechnician.cntySaltLake" type="checkbox" value="Salt Lake"> Salt Lake
+					<input ng-model="newTechnician.cntyTooele" type="checkbox" value="Tooele"> Tooele
+					<input ng-model="newTechnician.cntyUtah" type="checkbox" value="Utah"> Utah
+					<input ng-model="newTechnician.cntyWeber" type="checkbox" value="Weber"> Weber
+					<input ng-model="newTechnician.cntyUinta" type="checkbox" value="Uinta"> Uinta (Evanston)
+					</fieldset>
+				</div>
+			</div>
+		</fieldset>
+
+			<div class="submitButton">
+				<input ng-click="createTechnician(newTechnician)" type="submit" value="submit" placeholder="Submit Request">
+			</div>
+	</form>
+</div>

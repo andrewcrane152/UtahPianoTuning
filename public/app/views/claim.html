@@ -1,0 +1,35 @@
+<label>Search: <input ng-model="searchText"></label>
+
+<fieldset class="boringBorder" ng-repeat="message in messages | filter:searchText">
+	<legend>Customer Info</legend>
+	<span>{{message.firstName}} - </span>
+	<span>{{message.city}},</span>
+	<span>{{message.county}} County,</span>
+	<span>{{message.state}}</span>
+	<fieldset>
+		<legend>Piano Info</legend>
+		<span>{{message.pianoBrand}}</span>
+		<span>{{message.pianoKind}}</span>
+		<span>{{message.pianoAge}} old</span>
+		<span>Last Tuned: {{message.lastTuned}}</span>
+		<div>
+			<legend><strong>Services Requested</strong></legend>
+			<span ng-show="message.tuning">Tuning</span>
+			<span ng-show="message.pitchRaise">Pitch Raise</span>
+			<span ng-show="message.repairs">Repairs</span>
+			<span ng-show="message.internalCleaning">Internal Cleaning</span>
+			<span ng-show="message.regulation">Regulation</span>
+			<span ng-show="message.purchaseConsult">Purchase Consult</span>
+			<span ng-show="message.estimate">Estimate</span>
+			<span ng-show="message.appraisal">Appraisal</span>
+			<span ng-show="message.other">Other</span>
+			<span ng-show="message.comment">{{message.comment}}</span>
+			<span ng-show="message.submittedAt">Submitted on: {{message.submittedAt | date: 'fullDate'}}</span>
+
+			<div class="claimButton">
+				<input ng-click="claimLead()" type="submit" placeholder="Claim">
+			</div>
+
+		</div>
+	</fieldset>
+</fieldset>
