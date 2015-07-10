@@ -23,6 +23,16 @@ var TechniciansSchema = new mongoose.Schema({
 ,	appraisal: {type: Boolean}
 ,	other: {type: Boolean}
 ,	comment: {type: String}
+, cntyBoxElder: {type: Boolean}
+, cntyCache: {type: Boolean}
+, cntyDavis: {type: Boolean}
+, cntyJuab: {type: Boolean}
+, cntyMorgan: {type: Boolean}
+, cntySaltLake: {type: Boolean}
+, cntyTooele: {type: Boolean}
+, cntyUtah: {type: Boolean}
+, cntyWeber: {type: Boolean}
+, cntyUinta: {type: Boolean}
 
 });
 

@@ -1,72 +1,122 @@
-<div>
-	<div>
-		<p>
-			Fill out this form to register as a Piano Technician with Tune My Piano.
-		</p>
-	</div>
-	<form>
-		<fieldset class="requestTuning">
-			<legend>Contact Information: </legend>
-			<span>*All fields Required:</span>
-			<div class="contactInfo">
-				<div>First Name: <input name="contactInput" ng-model="newTechnician.firstName" type="text" placeholder="First Name" required></div>
-				<div>Last Name: <input name="contactInput" ng-model="newTechnician.lastName" type="text" placeholder="Last Name" required></div>
-				<div>Address: <input name="contactInput" ng-model="newTechnician.address" type="text" placeholder="Address" required></div>
-				<div>City: <input name="contactInput" ng-model="newTechnician.city" type="text" placeholder="City" required></div>
-				<div>State: <input name="contactInput" ng-model="newTechnician.state" type="text" placeholder="State" required></div>
-				<div>Zip: <input name="contactInput" ng-model="newTechnician.zip" type="text" placeholder="Zip" required></div>
-				<div>Phone: <input name="contactInput" ng-model="newTechnician.phone" type="text" placeholder="Phone" required></div>
-				<div>Email: <input name="contactInput" ng-model="newTechnician.email" type="email" placeholder="Email" required></div>
-			</div>
-		</fieldset>
-		<fieldset class="requestTuning">
-			<legend>Select the work your are able to perform: </legend>
-			<span>Select all that aply.  You will receive email notifications when new service requests are submitted that match your preferences.</span>
-			<div class="pianoInfo">
-			
-				<div class="pianoKind">
-					<span>Piano types</span> <br>
-					<form>
-					<input ng-model="newTechnician.pianoKindGrand" type="checkbox"> Grand
-					<input ng-model="newTechnician.pianoKindConsole" type="checkbox"> Console
-					<input ng-model="newTechnician.pianoKindSpinet" type="checkbox"> Spinet
-					<input ng-model="newTechnician.pianoKindOldUpright" type="checkbox"> Old Upright
-					</form>
-				</div>
-						
-				<div class="workNeeded">
-					<span>Type of Work You Perform</span> <br>
-					<input ng-model="newTechnician.tuning" type="checkbox"> Tuning
-					<input ng-model="newTechnician.pitchRaise" type="checkbox"> Pitch Raise
-					<input ng-model="newTechnician.repairs" type="checkbox"> Repairs
-					<input ng-model="newTechnician.internalCleaning" type="checkbox"> Internal Cleaning
-					<input ng-model="newTechnician.regulation" type="checkbox"> Regulation
-					<input ng-model="newTechnician.purchaseConsult" type="checkbox"> Purchase Consult
-					<input ng-model="newTechnician.estimate" type="checkbox"> Estimate
-					<input ng-model="newTechnician.appraisal" type="checkbox"> Appraisal
-				</div>
-				
-				<div class="utahCounties">
-					<span>Counties You Service</span> <br>
-					<fieldset>
-					<legend>Utah</legend>
-					<input ng-model="newTechnician.cntyBoxElder" type="checkbox" value="Box Elder"> Box Elder
-					<input ng-model="newTechnician.cntyCache" type="checkbox" value="Cache"> Cache
-					<input ng-model="newTechnician.cntyDavis" type="checkbox" value="Davis"> Davis
-					<input ng-model="newTechnician.cntyJuab" type="checkbox" value="Juab"> Juab
-					<input ng-model="newTechnician.cntyMorgan" type="checkbox" value="Morgan"> Morgan
-					<input ng-model="newTechnician.cntySaltLake" type="checkbox" value="Salt Lake"> Salt Lake
-					<input ng-model="newTechnician.cntyTooele" type="checkbox" value="Tooele"> Tooele
-					<input ng-model="newTechnician.cntyUtah" type="checkbox" value="Utah"> Utah
-					<input ng-model="newTechnician.cntyWeber" type="checkbox" value="Weber"> Weber
-					<input ng-model="newTechnician.cntyUinta" type="checkbox" value="Uinta"> Uinta (Evanston)
-					</fieldset>
-				</div>
-			</div>
-		</fieldset>
-
-			<div class="submitButton">
-				<input ng-click="createTechnician(newTechnician)" type="submit" value="submit" placeholder="Submit Request">
-			</div>
-	</form>
+<div class="box">
+	<p>
+		Filling out this form will generate an email notification to technicians in your area that have indicated they are interested in, and capable of, doing the work that you are requesting.
+	</p>
+	<p>
+		Once the form is filled out you can then expect a qualified technician to contact you within 24 business hours.
+	</p>
 </div>
+<form class="box">
+	<fieldset class="requestTuning">
+		<legend>Contact Information: </legend>
+		<div class="contactInfo">
+			<div>First Name: <input name="contactInput" ng-model="newLead.firstName" type="text" placeholder="First Name" required></div>
+			<div>Last Name: <input name="contactInput" ng-model="newLead.lastName" type="text" placeholder="Last Name" required></div>
+			<div>Address: <input name="contactInput" ng-model="newLead.address" type="text" placeholder="Address" required></div>
+			<div>City: <input name="contactInput" ng-model="newLead.city" type="text" placeholder="City" required></div>
+			<div>County: <input name="contactInput" ng-model="newLead.county" type="text" placeholder="County" required></div>
+			<div>State: <input name="contactInput" ng-model="newLead.state" type="text" placeholder="State" required></div>
+			<div>Zip: <input name="contactInput" ng-model="newLead.zip" type="text" placeholder="Zip" required></div>
+			<div>Phone: <input name="contactInput" ng-model="newLead.phone" type="text" placeholder="Phone" required></div>
+			<div>Email: <input name="contactInput" ng-model="newLead.email" type="text" placeholder="Email" required></div>
+		</div>
+	</fieldset>
+	<fieldset class="requestTuning">
+		<legend>Piano Information: </legend>
+		<div class="pianoInfo">
+		<form>	
+
+			<div class="pianoKind">
+				<label for="pianoKind">
+					<span>What Kind of Piano is it?</span>
+					<select ng-model="newLead.pianoKind" id="pianoKind" name="pianoKind" required>
+						<option>Grand</option>
+						<option>Console</option>
+						<option>Spinet</option>
+						<option>Old Upright</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="pianoBrand">
+				<span>What brand of Piano is it?</span>
+				<input name="brand" ng-model="newLead.pianoBrand" type="text" placeholder="Piano's Brand">
+			</div>
+			
+			<div class="pianoAge">
+				<label for="pianoKind">
+					<span>How old is your piano?</span>
+					<select ng-model="newLead.pianoAge" id="pianoAge" name="pianoAge" required>
+						<option>0-15 yrs</option>
+						<option>15-30 yrs</option>
+						<option>30-50 yrs</option>
+						<option>50-75 yrs</option>
+						<option>75+ yrs</option>
+					</select>
+				</label>
+			</div>
+			
+			<div class="lastTuned">
+				<label for="pianoKind">
+					<span>When was your piano last tuned?</span>
+					<select ng-model="newLead.lastTuned" id="lastTuned" name="lastTuned" required>
+						<option>0-1 yrs</option>
+						<option>1-2 yrs</option>
+						<option>3-5 yrs</option>
+						<option>5-10 yrs</option>
+						<option>10+ yrs</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="workNeeded">
+				<span>What kind of work do you want done?</span> <br>
+				<input ng-model="newLead.tuning" type="checkbox" value="tuningCheckbox"> Tuning
+				<input ng-model="newLead.pitchRaise" type="checkbox" value="pitchRaiseCheckbox"> Pitch Raise
+				<input ng-model="newLead.repairs" type="checkbox" value="repairsCheckbox"> Repairs
+				<input ng-model="newLead.internalCleaning" type="checkbox" value="internalCleaningCheckbox"> Internal Cleaning
+				<input ng-model="newLead.regulation" type="checkbox" value="regulationCheckbox"> Regulation
+				<input ng-model="newLead.purchaseConsult" type="checkbox" value="purchaseConsultCheckbox"> Purchase Consult
+				<input ng-model="newLead.estimate" type="checkbox" value="estimateCheckbox"> Estimate
+				<input ng-model="newLead.appraisal" type="checkbox" value="appraisalCheckbox"> Appraisal
+				<input ng-model="newLead.other" type="checkbox" value="otherCheckbox"> Other
+				<input ng-model="newLead.comment" name="commentField" placeholder="Describe repairs or other work needed.">
+			</div>
+		</div>
+		</form>
+		<div class="submitButton">
+			<input ng-click="createLead(newLead)" type="submit" value="submit" placeholder="Submit Request">
+		</div>
+	</fieldset>
+</form>
+
+<div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">What to expect from
+                    <strong>a technician's visit</strong>
+                </h2>
+                <hr>
+				<h4>How long will it take?</h4>
+					<p>Most Piano Technicians try to be in and out of your house within a two hour window.  This window can obviously vary if repairs are needed, but generally two hours should suffice - even if a pitch raise is needed.</p>
+				<h4>What should I do to be ready for them to come?</h4>
+					<p>It is helpful to the technician if you have the piano cleared of decorations before they arrive.  Otherwise, just being there to let them in and being prepared to pay them before they leave is sufficient.</p>
+				<h4>How much should I expect to pay?</h4>
+					<p>This is a difficult question to answer.  Most technicians have a base rate just to come out to your house.  They will also have a base rate for the minimum service that they provide when called on to do a basic tuning.  If there are services required outside of that base rate the technician will generally charge an hourly rate for time it takes them to perform the additional services.</p>
+					<p>If it is helpful, one technician has reported an average ticket price of $110 per house visit over a five year span.  This average accounts for both large repairs ($40/hr) and simple tunings ($75 base rate). </p>
+				<h4>What can I expect from the piano technician?</h4>
+					<p>Expect them to be professional.  It may be somewhat uncomfortable for you to invite a stranger into your home for a couple hours, but understand that they have made a career of it.  Obviously piano technicians can vary in personality types, but most are naturally quite curteous as a guest in your home.</p>
+					<p>It is common for individuals having their piano tuned (especially if it has been a while) to be curious about how their piano works, or how a tuning is done.  Please feel free to ask your technician any questions you have.  Also, feel free to watch them work and ask questions about how they learned to tune or what they are listening for when tuning.  Unless the technician is under a time constraint, they will enjoy the interaction and sharing with you why they love what they do.</p>
+				<h4>What is a pitch raise and why is it needed?</h4>
+					<p>Pitch raises are commonly needed if it has been 2 or more years since your piano was last serviced.  The reason for this is tention.</p>
+					<p>Your piano is engineered to be constantly under a great deal of tention from the collective pull of it's strings (see below for more details).  If the tention on those strings is significantly decreased (ie. the individual keys are flat enough that they are 20% on their way down to being where the next note should be), then bringing them back up to tention can instantly add a cumulative 3,000+ lbs onto the structure of your piano.  The new tention being added (imagine a large car being placed on the piano) causes the distance between the tuning pin and hitch pins to decrease and pitch of to drop again. To remedy this problem the piano technician will (in essence) tune the piano twice in a single service call, the first being the pitch raise, and the second being a fine tuning.</p>
+				<h4>How often should I have my piano tuned?</h4>
+					<p>Most in home pianos need to be serviced every 12 to 18 months.  Doing so will add longevity to the piano's life, help avoid major repairs and make it more enjoyable to play.</p>
+					<p>It is a common misconception that pianos can be tuned too frequently.  Some of the nicest pianos in concert halls are tuned multiple times per week.  Most are tuned before a performance, and sometimes even during intermission they will receive a quick service.</p>
+				<h4>What causes a piano to loose it's pitch</h4>
+					<p>Tempurature and humidity fluctations are the piano's biggest enemy.  The internal structure of the piano is mainly wood, metal, and felt.  I'm sure you can imagine how those materials will react if placed under a swamp cooler over a heating/ac vent that is turned off and on all day, or in a location that gets direct sunlight for a couple hours in the day.</p>
+					<p>Outside of tempurature and humidity fluctuations expediting the process, simple physics over time causes the piano to loose tention.</p>
+            </div>
+        </div>
+    </div>

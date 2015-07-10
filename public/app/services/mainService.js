@@ -12,7 +12,7 @@ angular.module('tuneMyPiano')
 	this.readLead = function(){
 		return $http({
 			method: 'GET',
-			url: 'http://localhost:9898/api/leads'
+			url: 'http://localhost:9999/api/leads'
 		})
 	}
 
@@ -20,7 +20,7 @@ angular.module('tuneMyPiano')
 		console.log("technician service", newTechnician);
 		return $http({
 			method: 'POST',
-			url: 'http://localhost:9898/api/technicians',
+			url: 'http://localhost:9999/api/technicians',
 			data: { technician: newTechnician }
 		})
 	}
