@@ -12,9 +12,15 @@ app.config(function($routeProvider){
 			}
 		}
 	})
+
 	.when('/request', {
 		templateUrl: 'app/views/request.html',
 		controller: 'requestCtrl'
+	})
+
+	.when('/contact', {
+		templateUrl: 'app/views/contact.html',
+		controller: 'contactCtrl'
 	})
 
 	.when('/claim', {
@@ -31,7 +37,7 @@ app.config(function($routeProvider){
 				return deferred.promise;
 			}
 		}
-	})	
+	})
 
 	.when('/register', {
 		templateUrl: 'app/views/register.html',

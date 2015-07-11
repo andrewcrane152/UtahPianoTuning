@@ -1,8 +1,4 @@
 var LeadModel = require('../models/leadsSchema');
-var emailAll = function(){
-
-};
-
 
 module.exports = {
 	createLead: function(req, res){

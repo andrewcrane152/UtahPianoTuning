@@ -15,8 +15,6 @@ app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname + "/public"));
-
 
 app.post('/api/leads', leadsCtrl.createLead);
 app.get('/api/leads', leadsCtrl.readLead);
@@ -24,6 +22,8 @@ app.get('/api/leads', leadsCtrl.readLead);
 
 app.post('/api/technicians', techniciansCtrl.createTechnician);
 
+
+// app.post('api/email/send', emailCtrl.sendEmail);
 
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function(){
