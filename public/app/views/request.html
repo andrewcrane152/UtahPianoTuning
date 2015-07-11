@@ -1,4 +1,163 @@
-<div class="box">
+<div class="container">
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12">
+              <hr>
+              <h2 class="intro-text text-center">Request a
+                  <strong>Piano Technician</strong>
+              </h2>
+              <hr>
+							<h4 class="intro-text text-center">
+                  Filling out this form will generate an email notification to technicians in your area that have indicated they are interested in, and capable of, doing the work that you are requesting.
+              </h4>
+							<h4 class="intro-text text-center">
+		Once the form is filled out you can then expect a qualified technician to contact you within 24 business hours.
+							</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="box">
+              <div class="col-lg-12">
+                  <form role="form">
+	                  <hr>
+	                  <h2 class="intro-text text-center">
+	                      <strong>Your Contact Information</strong>
+	                  </h2>
+	                  <hr>
+	                  <p>First, some information about you...</p>
+                      <div class="row">
+                          <div class="form-group col-lg-6">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" ng-model="newLead.firstName">
+                          </div>
+													<div class="form-group col-lg-6">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" ng-model="newLead.lastName">
+                          </div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-4">
+															<label>Address</label>
+															<input type="text" class="form-control" ng-model="newLead.address">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>City</label>
+															<input type="text" class="form-control" ng-model="newLead.city">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>County</label>
+															<input type="text" class="form-control" ng-model="newLead.county">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>State</label>
+															<input type="text" class="form-control" ng-model="newLead.state">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>Zip</label>
+															<input type="text" class="form-control" ng-model="newLead.zip">
+													</div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-6">
+                              <label>Phone Number</label>
+                              <input type="tel" class="form-control" ng-model="newLead.phone">
+                          </div>
+                          <div class="form-group col-lg-6">
+                              <label>Email Address</label>
+                              <input type="email" class="form-control" ng-model="newLead.email">
+                          </div>
+                          <div class="clearfix"></div>
+													<hr>
+				                  <h2 class="intro-text text-center">
+				                      <strong>Your Piano's Information</strong>
+				                  </h2>
+				                  <hr>
+				                  <p>Now, about your piano...</p>
+													<div class="form-group col-lg-6">
+                              <label>What Kind of Piano is it?</label>
+                              <select class="form-control" ng-model="newLead.pianoKind">
+																<option>Grand</option>
+																<option>Console</option>
+																<option>Spinet</option>
+																<option>Old Upright</option>
+															</select>
+                          </div>
+													<div class="form-group col-lg-6">
+															<label>What Brand of Piano is it?</label>
+															<input type="text" class="form-control" ng-model="newLead.pianoBrand">
+													</div>
+													<div class="form-group col-lg-6">
+															<label>How old is your piano?</label>
+															<select class="form-control" ng-model="newLead.pianoAge" placeholder="Piano's Age">
+																<option>0-15 yrs</option>
+																<option>15-30 yrs</option>
+																<option>30-50 yrs</option>
+																<option>50-75 yrs</option>
+																<option>75+ yrs</option>
+															</select>
+													</div>
+													<div class="form-group col-lg-6">
+															<label>When was your piano last serviced?</label>
+															<select class="form-control" ng-model="newLead.lastTuned" placeholder="Last Serviced">
+																<option>0-1 yrs</option>
+																<option>1-2 yrs</option>
+																<option>3-5 yrs</option>
+																<option>5-10 yrs</option>
+																<option>10+ yrs</option>
+															</select>
+													</div>
+													<div class="form-group col-lg-12 text-center">
+															<label>What kind of services would you like performed?</label>
+													</div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-3">
+															<label>Tuning</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.tuning">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Pitch Raise</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.pitchRaise">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Repairs</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.repairs">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Internal Cleaning</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.internalCleaning">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Regulation</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.regulation">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Purchase Consult</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.purchaseConsult">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Estimate</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.estimate">
+													</div>
+													<div class="form-group col-lg-3">
+															<label>Appraisal</label>
+															<input type="checkbox" class="form-control" ng-model="newLead.appraisal">
+													</div>
+													<div class="clearfix"></div>
+                          <div class="form-group col-lg-12">
+                              <label>Message</label>
+                              <textarea class="form-control" rows="6" ng-model="message" placeholder="Indicate any questions, specific repair requests, best time to contact, etc."></textarea>
+                          </div>
+                          <div class="form-group col-lg-12">
+                              <input type="hidden" name="save" value="contact">
+                              <button type="submit" class="btn btn-default" ng-click="createLead(newLead)" placeholder="Submit Request">Submit</button>
+															// ; sendEmail(newLead.email, newLead.firstName, utahpianotuning@gmail.com, "New Lead Created", )
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+<!-- <div class="box">
 	<p>
 		Filling out this form will generate an email notification to technicians in your area that have indicated they are interested in, and capable of, doing the work that you are requesting.
 	</p>
@@ -91,7 +250,7 @@
 			</div>
 		</fieldset>
 	</form>
-</div>
+</div> -->
 
 <div class="container">
 	<div class="row">
@@ -118,7 +277,7 @@
 					<h4>How often should I have my piano tuned?</h4>
 						<p>Most in home pianos need to be serviced every 12 to 18 months.  Doing so will add longevity to the piano's life, help avoid major repairs and make it more enjoyable to play.</p>
 						<p>It is a common misconception that pianos can be tuned too frequently.  Some of the nicest pianos in concert halls are tuned multiple times per week.  Most are tuned before a performance, and sometimes even during intermission they will receive a quick service.</p>
-					<h4>What causes a piano to loose it's pitch</h4>
+					<h4>What causes a piano to loose it's pitch?</h4>
 						<p>Tempurature and humidity fluctations are the piano's biggest enemy.  The internal structure of the piano is mainly wood, metal, and felt.  I'm sure you can imagine how those materials will react if placed under a swamp cooler over a heating/ac vent that is turned off and on all day, or in a location that gets direct sunlight for a couple hours in the day.</p>
 						<p>Outside of tempurature and humidity fluctuations expediting the process, simple physics over time causes the piano to loose tention.</p>
           </div>
