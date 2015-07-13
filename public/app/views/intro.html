@@ -18,10 +18,9 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="#intro">Home</a></li>
-				<li><a href="#request">Request</a></li>
-				<li><a href="#register">Technicians</a></li>
-				<li><a href="#claim">Claim</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#request">Request a Technician</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+				<li><a href="#register">Technician Sign-In</a></li>
 			</ul>
 		</div> <!-- /.navbar-collapse -->
 </nav>
@@ -84,9 +83,14 @@
                 <hr>
                 <img class="img-responsive img-border img-left" src="styles/images/intro-pic.jpg" alt="">
                 <hr class="visible-xs">
-                <p>This site is designed to help you, the <em><u>Piano Owner</u></em>, get lined up with the right <em><u>Piano Technician</u></em></p>
-                <p>...and to help you <a href="#/request">know what to expect</a> when they arrive.</p>
-                <p><button href="#/request" target="_blank">Request a Technician</buttonfl></p>
+                <p class="text-center">This site is designed to help you, the <em>Piano Owner</em>, get lined up with the right <em>Piano Technician</em></p>
+								<br>
+                <p class="text-center">...and to help you know <a href="#/request">what to expect</a> when they arrive.</p>
+								<br>
+								<div class="text-center">
+										<input type="hidden" name="save" value="contact">
+										<button type="submit" class="btn btn-default" ng-click="#/request">REQUEST A TECHNICIAN</button>
+								</div>
             </div>
         </div>
     </div>
@@ -95,29 +99,36 @@
     <div class="box">
         <div class="col-lg-12">
             <hr>
-            <h2 class="intro-text text-center">Fun trivia about
+            <h1 class="intro-text text-center">Fascinating Facts about
                 <strong>Your Piano</strong>
-            </h2>
+            </h1>
             <hr>
-            <h4>Piano Specifications</h4>
-                <p>Nearly all pianos have 88 keys, but the number of strings inside of the piano varies by manufacturer and model.  The <em>average</em> number of strings in a piano is 220.</p>
-                <p>Each string in a piano is designed to maintain around 200lbs of tention, which equates to more than 40,000lbs of total string tention compressing the piano's support structure... this is enough tention to lift a mobile home off the ground!</p>
-                <p>Most early 1900's upright pianos did not have a middle pedal.  It was simply the asthetic appeal to the american consumers that caused piano manufacutrers to add the middle pedal.</p>
-                <p>While the middle pedal does have a defined purpose in grand pianos, the variety of functions performed by the middle pedal on upright pianos still vary greatly.</p>
-                <p>The moving parts inside a piano that make it work, or piano action, can be very complicated with as many as 40-60 parts per key; each part having a specific purpose.</p>
-                <p>The average piano string is designed to last approximately 50 years before it needs to be overstretched to maintain it's tension... similar to a rubber band that has been under constant tention for a prolonged amount of time.</p>
-            <h4>Origins of the Piano</h4>
-                <p>Bartholomeu Christophori is credited for inventing the Piano around the turn of the 18th century.</p>
-                <p>He was an inventor and a musician for an Italian magistrate who wanted an instrument that was similar to the harpsicord, but that could fluctuate in volume.
-                <p>It took more than a decade and seven different renditions before Christophori had a design that he and other musicians were pleased with.</p>
-                <p>He named his new instrument the <em>Piano Forte</em>  ...Italian for <em>Soft Loud</em>.</p>
-                <p>Christophori's design for has gone mostly unchanged to this day... more than 200 years later.</p>
-            <h4>Modern Pianos</h4>
-                <p>The upright piano became popular starting in the 1890's, and by 1910 well over 100 different piano manufacturers were selling pianos in the United States.  </p>
-                <p>During the first and second world wars the majority of those piano manufacturers converted to making wartime goods, or were forsed to close altogether.</p>
-                <p>It wasn't until the 1940's that the piano industry experienced a resurgence with the production of a cheaper, smaller piano called the Spinet, or Drop Action piano.</p>
-                <p>By the mid 1950's the piano become, once again, an american staple for in-home entertainment.</p>
-                <p>Today piano technicians are called on to service all types of pianos, from brand new concert grands to family heirlooms from 1895.</p>
+            <h4 class="text-center">Piano Specifications</h4>
+						<hr>
+                <p>- Nearly all pianos have 88 keys, but the number of strings inside of the piano varies by manufacturer and model.  The <em>average</em> number of strings in a piano is 220.</p>
+                <p>- Each string in a piano is designed to maintain around 200lbs of tention, which equates to more than 40,000lbs of total string tention compressing the piano's support structure... this is enough tention to lift a mobile home off the ground!</p>
+                <p>- The average piano string is designed to last approximately 50 years before it needs to be overstretched to maintain it's tension... similar to a rubber band that has been under constant tention for a prolonged amount of time.</p>
+                <p>- Most early 1900's upright pianos did not have a middle pedal.  It was simply the asthetic appeal to the american consumers that caused piano manufacutrers to add the middle pedal.</p>
+                <p>- While the middle pedal does have a defined purpose in grand pianos, the variety of functions performed by the middle pedal on upright pianos still vary greatly.</p>
+                <p>- The moving parts inside a piano that make it work, or piano action, can be very complicated with as many as 40-60 parts per key; each part having a specific purpose.</p>
+								<br>
+						<hr>
+            <h4 class="text-center">Origins of the Piano</h4>
+						<hr>
+                <p>- Bartholomeu Christophori is credited for inventing the Piano around the turn of the 18th century.</p>
+                <p>- He was an inventor and a musician for an Italian magistrate who wanted an instrument that was similar to the harpsicord, but that could fluctuate in volume.
+                <p>- It took more than a decade and seven different renditions before Christophori had a design that he and other musicians were pleased with.</p>
+                <p>- He named his new instrument the <em>Piano Forte</em>  ...Italian for <em>Soft Loud</em>.</p>
+                <p>- Christophori's design for has gone mostly unchanged to this day... more than 200 years later.</p>
+								<br>
+						<hr>
+            <h4 class="text-center">Modern Pianos</h4>
+						<hr>
+                <p>- The upright piano became popular starting in the 1890's, and by 1910 well over 100 different piano manufacturers were selling pianos in the United States.  </p>
+                <p>- During the first and second world wars the majority of those piano manufacturers converted to making wartime goods, or were forsed to close altogether.</p>
+                <p>- It wasn't until the 1940's that the piano industry experienced a resurgence with the production of a cheaper, smaller piano called the Spinet, or Drop Action piano.</p>
+                <p>- By the mid 1950's the piano become, once again, an american staple for in-home entertainment.</p>
+                <p>- Today, piano technicians are called on to service all types of pianos, from brand new concert grands to family heirlooms from 1895.</p>
 
         </div>
     </div>
