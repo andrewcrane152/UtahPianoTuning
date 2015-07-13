@@ -36,16 +36,16 @@ angular.module('tuneMyPiano')
 		"show": false
 	}];
 
-	$scope.hover=function()
-
+	// $scope.hover=function()
 	//
-	// $scope.sendEmail = function(fromEmail, fromName, toName, subject, message){
-	// 	emailService.sendEmail(fromEmail, fromName, toEmail, toName, subject, message).then(function(response){
-	// 		$scope.fromEmail = '';
-	// 		$scope.fromName = '';
-	// 		$scope.message = '';
-	// 		alert("Thank you for your request.");
-	// 	});
-	// };
-	//
+	// //
+	// // $scope.sendEmail = function(fromEmail, fromName, toName, subject, message){
+	// // 	emailService.sendEmail(fromEmail, fromName, toEmail, toName, subject, message).then(function(response){
+	// // 		$scope.fromEmail = '';
+	// // 		$scope.fromName = '';
+	// // 		$scope.message = '';
+	// // 		alert("Thank you for your request.");
+	// // 	});
+	// // };
+	// //
 });

@@ -1,72 +1,205 @@
-<div>
-	<div>
-		<p>
-			Fill out this form to register as a Piano Technician with Tune My Piano.
-		</p>
-	</div>
-	<form>
-		<fieldset class="requestTuning">
-			<legend>Contact Information: </legend>
-			<span>*All fields Required:</span>
-			<div class="contactInfo">
-				<div>First Name: <input name="contactInput" ng-model="newTechnician.firstName" type="text" placeholder="First Name" required></div>
-				<div>Last Name: <input name="contactInput" ng-model="newTechnician.lastName" type="text" placeholder="Last Name" required></div>
-				<div>Address: <input name="contactInput" ng-model="newTechnician.address" type="text" placeholder="Address" required></div>
-				<div>City: <input name="contactInput" ng-model="newTechnician.city" type="text" placeholder="City" required></div>
-				<div>State: <input name="contactInput" ng-model="newTechnician.state" type="text" placeholder="State" required></div>
-				<div>Zip: <input name="contactInput" ng-model="newTechnician.zip" type="text" placeholder="Zip" required></div>
-				<div>Phone: <input name="contactInput" ng-model="newTechnician.phone" type="text" placeholder="Phone" required></div>
-				<div>Email: <input name="contactInput" ng-model="newTechnician.email" type="email" placeholder="Email" required></div>
-			</div>
-		</fieldset>
-		<fieldset class="requestTuning">
-			<legend>Select the work your are able to perform: </legend>
-			<span>Select all that aply.  You will receive email notifications when new service requests are submitted that match your preferences.</span>
-			<div class="pianoInfo">
+<div class="container">
+<div class="brand">Tune My Piano</div>
+<div class="address-bar">Pairing Technicians with the perfect Piano</div>
+</div> <!-- /.container -->
 
-				<div class="pianoKind">
-					<span>Piano types</span> <br>
-					<form>
-					<input ng-model="newTechnician.pianoKindGrand" type="checkbox"> Grand
-					<input ng-model="newTechnician.pianoKindConsole" type="checkbox"> Console
-					<input ng-model="newTechnician.pianoKindSpinet" type="checkbox"> Spinet
-					<input ng-model="newTechnician.pianoKindOldUpright" type="checkbox"> Old Upright
-					</form>
-				</div>
 
-				<div class="workNeeded">
-					<span>Type of Work You Perform</span> <br>
-					<input ng-model="newTechnician.tuning" type="checkbox"> Tuning
-					<input ng-model="newTechnician.pitchRaise" type="checkbox"> Pitch Raise
-					<input ng-model="newTechnician.repairs" type="checkbox"> Repairs
-					<input ng-model="newTechnician.internalCleaning" type="checkbox"> Internal Cleaning
-					<input ng-model="newTechnician.regulation" type="checkbox"> Regulation
-					<input ng-model="newTechnician.purchaseConsult" type="checkbox"> Purchase Consult
-					<input ng-model="newTechnician.estimate" type="checkbox"> Estimate
-					<input ng-model="newTechnician.appraisal" type="checkbox"> Appraisal
-				</div>
+<div class="container">
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12">
+              <hr>
+              <h2 class="intro-text text-center">Join
+                  <strong>Tune My Piano</strong>
+              </h2>
+              <hr>
+							<p class="text-center">
+                  Filling out this form will register you as a technician with <em>Tune My Piano</em>.
+              </p>
+							<p class="text-center">
+									Indicating the services you perform and what counties you service will generate automated emails each time a new service request is created that matches your criteria.
+							</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="box">
+              <div class="col-lg-12">
+                  <form role="form">
+	                  <hr>
+	                  <h2 class="intro-text text-center">
+	                      <strong>Your Contact Information</strong>
+	                  </h2>
+	                  <hr>
+	                  <div class="row">
+                          <div class="form-group col-lg-6">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" ng-model="newTechnician.firstName">
+                          </div>
+													<div class="form-group col-lg-6">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" ng-model="newTechnician.lastName">
+                          </div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-4">
+															<label>Address</label>
+															<input type="text" class="form-control" ng-model="newTechnician.address">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>City</label>
+															<input type="text" class="form-control" ng-model="newTechnician.city">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>County</label>
+															<input type="text" class="form-control" ng-model="newTechnician.county">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>State</label>
+															<input type="text" class="form-control" ng-model="newTechnician.state">
+													</div>
+													<div class="form-group col-lg-2">
+															<label>Zip</label>
+															<input type="text" class="form-control" ng-model="newTechnician.zip">
+													</div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-6">
+                              <label>Phone Number</label>
+                              <input type="tel" class="form-control" ng-model="newTechnician.phone">
+                          </div>
+                          <div class="form-group col-lg-6">
+                              <label>Email Address</label>
+                              <input type="email" class="form-control" ng-model="newTechnician.email">
+                          </div>
+                          <div class="clearfix"></div>
+													<hr>
+				                  <h2 class="intro-text text-center">
+				                      <strong>The Work You Do</strong>
+				                  </h2>
+				                  <hr>
+													<div class="form-group col-lg-12 text-center">
+															<label>What Services do you Offer?</label>
+													</div>
+													<div class="clearfix"></div>
+													<!-- <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label> -->
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.tuning">Tuning
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.pitchRaise">Pitch Raise
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.repairs">Repairs
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.internalCleaning">Internal Cleaning
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.regulation">Regulation
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.purchaseConsult">Purchase Consult
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.estimate">Estimate
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.appraisal">Appraisal
+														</label>
+													</div>
+													<div class="clearfix"></div>
 
-				<div class="utahCounties">
-					<span>Counties You Service</span> <br>
-					<fieldset>
-					<legend>Utah</legend>
-					<input ng-model="newTechnician.cntyBoxElder" type="checkbox" value="Box Elder"> Box Elder
-					<input ng-model="newTechnician.cntyCache" type="checkbox" value="Cache"> Cache
-					<input ng-model="newTechnician.cntyDavis" type="checkbox" value="Davis"> Davis
-					<input ng-model="newTechnician.cntyJuab" type="checkbox" value="Juab"> Juab
-					<input ng-model="newTechnician.cntyMorgan" type="checkbox" value="Morgan"> Morgan
-					<input ng-model="newTechnician.cntySaltLake" type="checkbox" value="Salt Lake"> Salt Lake
-					<input ng-model="newTechnician.cntyTooele" type="checkbox" value="Tooele"> Tooele
-					<input ng-model="newTechnician.cntyUtah" type="checkbox" value="Utah"> Utah
-					<input ng-model="newTechnician.cntyWeber" type="checkbox" value="Weber"> Weber
-					<input ng-model="newTechnician.cntyUinta" type="checkbox" value="Uinta"> Uinta (Evanston)
-					</fieldset>
-				</div>
-			</div>
-		</fieldset>
+                          <div class="form-group col-lg-12 text-center">
+                              <label>What Counties do you Service?</label>
+                          </div>
+                          <div class="clearfix"></div>
 
-			<div class="submitButton">
-				<input ng-click="createTechnician(newTechnician)" type="submit" value="submit" placeholder="Submit Request">
-			</div>
-	</form>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.cntyBoxElder">Box Elder
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.cntyCache">Cache
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.cntyDavis">Davis
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+															<label class="checkbox-inline">
+																<input type="checkbox" class="" ng-model="newTechnician.cntyJuab">Juab
+															</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntyMorgan">Morgan
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntySaltLake">Salt Lake
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntyTooele">Tooele
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntyUtah">Utah
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntyWeber">Weber
+														</label>
+													</div>
+													<div class="form-group col-lg-3">
+														<label class="checkbox-inline">
+															<input type="checkbox" class="" ng-model="newTechnician.cntyUinta">Uinta (Evanston)
+														</label>
+													</div>
+													<div class="clearfix"></div>
+
+                          <div class="form-group col-lg-12 text-center">
+                              <input type="hidden" name="save" value="contact">
+                              <button type="submit" class="btn btn-default" ng-click="createTechnician(newTechnician)" placeholder="Submit Request">Submit</button>
+															<!-- // ; sendEmail(newLead.email, newLead.firstName, utahpianotuning@gmail.com, "New Lead Created", ) -->
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+       </div>
+   </div>
 </div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>Copyright &copy; UtahPianoTuning.com 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
