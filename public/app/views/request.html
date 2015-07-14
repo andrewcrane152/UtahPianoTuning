@@ -181,13 +181,18 @@
 														</label>
 													</div>
 													<div class="clearfix"></div>
+													<div class="form-group col-lg-12 text-center">
+															<label ng-click="toggle()">Click here for a descripton of the services</label>
+															<services-description services-description="isVisible"></services-description>
+													</div>
+													<div class="clearfix"></div>
                           <div class="form-group col-lg-12">
                               <label>Message</label>
                               <textarea class="form-control" rows="6" ng-model="message" placeholder="Indicate any questions, specific repair requests, best time to contact, etc."></textarea>
                           </div>
                           <div class="form-group col-lg-12 text-center">
                               <input type="hidden" name="save" value="contact">
-                              <button type="submit" class="btn btn-default" ng-click="createLead(newLead)" placeholder="Submit Request">Submit</button>
+                              <button type="submit" class="btn btn-default" ng-click="createLead(newLead)" placeholder="Submit Request">Submit Request</button>
 															<!-- // ; sendEmail(newLead.email, newLead.firstName, utahpianotuning@gmail.com, "New Lead Created", ) -->
                           </div>
                       </div>
@@ -198,39 +203,6 @@
    </div>
 </div>
 
-
-<div class="container">
-	<div class="row">
-	        <div class="box">
-	            <div class="col-lg-12">
-	                <hr>
-	                <h2 class="intro-text text-center">What to expect from
-	                    <strong>a technician's visit</strong>
-	                </h2>
-	                <hr>
-					<h4>How long will it take?</h4>
-						<p>Most Piano Technicians try to be in and out of your house within a two hour window.  This window can obviously vary if repairs are needed, but generally two hours should suffice - even if a pitch raise is needed.</p>
-					<h4>What should I do to be ready for them to come?</h4>
-						<p>It is helpful to the technician if you have the piano cleared of decorations before they arrive.  Otherwise, just being there to let them in and being prepared to pay them before they leave is sufficient.</p>
-					<h4>How much should I expect to pay?</h4>
-						<p>This is a difficult question to answer.  Most technicians have a base rate just to come out to your house.  They will also have a base rate for the minimum service that they provide when called on to do a basic tuning.  If there are services required outside of that base rate the technician will generally charge an hourly rate for time it takes them to perform the additional services.</p>
-						<p>If it is helpful, one technician has reported an average ticket price of $110 per house visit over a five year span.  This average accounts for both large repairs ($40/hr) and simple tunings ($75 base rate). </p>
-					<h4>What can I expect from the piano technician?</h4>
-						<p>Expect them to be professional.  It may be somewhat uncomfortable for you to invite a stranger into your home for a couple hours, but understand that they have made a career of it.  Obviously piano technicians can vary in personality types, but most are naturally quite curteous as a guest in your home.</p>
-						<p>It is common for individuals having their piano tuned (especially if it has been a while) to be curious about how their piano works, or how a tuning is done.  Please feel free to ask your technician any questions you have.  Also, feel free to watch them work and ask questions about how they learned to tune or what they are listening for when tuning.  Unless the technician is under a time constraint, they will enjoy the interaction and sharing with you why they love what they do.</p>
-					<h4>What is a pitch raise and why is it needed?</h4>
-						<p>Pitch raises are commonly needed if it has been 2 or more years since your piano was last serviced.  The reason for this is tention.</p>
-						<p>Your piano is engineered to be constantly under a great deal of tention from the collective pull of it's strings (see below for more details).  If the tention on those strings is significantly decreased (ie. the individual keys are flat enough that they are 20% on their way down to being where the next note should be), then bringing them back up to tention can instantly add a cumulative 3,000+ lbs onto the structure of your piano.  The new tention being added (imagine a large car being placed on the piano) causes the distance between the tuning pin and hitch pins to decrease and pitch of to drop again. To remedy this problem the piano technician will (in essence) tune the piano twice in a single service call, the first being the pitch raise, and the second being a fine tuning.</p>
-					<h4>How often should I have my piano tuned?</h4>
-						<p>Most in home pianos need to be serviced every 12 to 18 months.  Doing so will add longevity to the piano's life, help avoid major repairs and make it more enjoyable to play.</p>
-						<p>It is a common misconception that pianos can be tuned too frequently.  Some of the nicest pianos in concert halls are tuned multiple times per week.  Most are tuned before a performance, and sometimes even during intermission they will receive a quick service.</p>
-					<h4>What causes a piano to loose it's pitch?</h4>
-						<p>Tempurature and humidity fluctations are the piano's biggest enemy.  The internal structure of the piano is mainly wood, metal, and felt.  I'm sure you can imagine how those materials will react if placed under a swamp cooler over a heating/ac vent that is turned off and on all day, or in a location that gets direct sunlight for a couple hours in the day.</p>
-						<p>Outside of tempurature and humidity fluctuations expediting the process, simple physics over time causes the piano to loose tention.</p>
-          </div>
-      </div>
-   </div>
-</div>
 
 <footer>
     <div class="container">
