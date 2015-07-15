@@ -1,4 +1,4 @@
-var app = angular.module('tuneMyPiano', ['ngRoute'])
+var app = angular.module('tuneMyPiano', ['ngRoute', 'ngAnimate']);
 
 app.config(function($routeProvider){
 	console.log('app loaded');

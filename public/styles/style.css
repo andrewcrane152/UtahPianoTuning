@@ -5,6 +5,7 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    -ms-background-size: cover;
 }
 
 h1,h2,h3,h4,h5,h6 {

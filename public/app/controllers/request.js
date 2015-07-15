@@ -5,14 +5,17 @@ angular.module('tuneMyPiano')
 		console.log("requestCtrl", newLead);
 		mainService.createLead(newLead).then(function(response){
 			console.log(response);
+			$scope.show = !$scope.show;
 		}, function(error){
 			console.log(error);
 		});
 	};
 
 	$scope.toggle = function() {
-		console.log('hola')
 		$scope.isVisible = !$scope.isVisible;
 	};
+
 	$scope.isVisible = false;
+
+	
 });

@@ -1,6 +1,6 @@
 var app = angular.module('tuneMyPiano');
 app.service('emailService', function($http){
-	this.sendEmail = function(fromEmail, fromName, fromPhone, toEmail, toName, subject, message){
+	this.sendContactUsEmail = function(fromEmail, fromName, fromPhone, toEmail, toName, subject, message){
 		return $http({
 			method: "POST",
 			url: "https://mandrillapp.com/api/1.0/messages/send.json",
