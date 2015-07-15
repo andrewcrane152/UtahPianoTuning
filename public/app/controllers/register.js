@@ -1,5 +1,5 @@
 angular.module('tuneMyPiano')
-.controller("registerCtrl", function($scope, mainService){
+.controller("registerCtrl", function($scope, mainService, emailService){
 
 	$scope.createTechnician = function(newTechnician) {
 		console.log("registerCtrl", newTechnician);
@@ -9,4 +9,14 @@ angular.module('tuneMyPiano')
 			console.log(error);
 		});
 	};
+
+	$scope.sendTechnicianConfirmEmail = function(newTechnician) {
+		emailService.sendTechnicianConfirmEmail(newTechnician).then(function(response){
+			$scope.newTechnician.email = '';
+			$scope.newTechnician.firstName = '';
+			$scope.newTechnician.lastName = '';
+			alert('We have just sent you a confirmation email.  Thank you for your support!');
+			});
+	};
+
 });

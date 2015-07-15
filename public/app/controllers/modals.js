@@ -15,7 +15,7 @@ app.controller("AppController", function( $scope, modals ) {
           }
       );
   };
-};
+});
 
 
 app.controller(

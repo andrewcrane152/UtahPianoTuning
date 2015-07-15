@@ -33,8 +33,12 @@ var TechniciansSchema = new mongoose.Schema({
 , cntyUtah: {type: Boolean}
 , cntyWeber: {type: Boolean}
 , cntyUinta: {type: Boolean}
-
+,	submittedAt: { type: Date, default: Date.now}
 });
 
+TechniciansSchema.pre('update', function(next){
+	this.submittedAt = new Date();
+	next();
+});
 
 module.exports = mongoose.model('technician', TechniciansSchema);

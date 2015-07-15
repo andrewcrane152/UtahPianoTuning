@@ -182,8 +182,7 @@
 
                           <div class="form-group col-lg-12 text-center">
                               <input type="hidden" name="save" value="contact">
-                              <button type="submit" class="btn btn-default" ng-click="createTechnician(newTechnician)" placeholder="Submit Request">Submit</button>
-															<!-- // ; sendEmail(newLead.email, newLead.firstName, utahpianotuning@gmail.com, "New Lead Created", ) -->
+                              <button type="submit" class="btn btn-default" ng-click="createTechnician(newTechnician); sendTechnicianConfirmEmail(newTechnician)" placeholder="Submit Request">Submit</button>
                           </div>
                       </div>
                   </form>

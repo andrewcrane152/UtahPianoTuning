@@ -13,7 +13,7 @@ var LeadSchema = new mongoose.Schema({
 ,	pianoKind: { type: String, enum: ["Grand", "Console", "Spinet", "Old Upright"]}
 ,	pianoBrand: { type: String }
 ,	pianoAge: { type: String, enum: ["0-15 yrs", "15-30 yrs", "30-50 yrs", "50-75 yrs", "75+ yrs"]}
-,	lastTuned: { type: String, enum: ["0-1 yrs", "1-2 yrs", "3-5 yrs", "5-10 yrs", "10+ years"]}
+,	lastTuned: { type: String, enum: ["0-1 yrs", "1-2 yrs", "3-5 yrs", "5-10 yrs", "10+ yrs"]}
 ,	tuning: { type: Boolean}
 ,	pitchRaise: { type: Boolean}
 ,	repairs: { type: Boolean}
