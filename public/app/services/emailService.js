@@ -22,7 +22,7 @@ app.service('emailService', function($http){
 		});
 	};
 
-	this.sendLeadConfirmEmail = function(newTechnician){
+	this.sendLeadConfirmEmail = function(newLead){
 			console.log('sendLeadConfirmEmail made it to the service');
 		return $http({
 			method: "POST",
@@ -39,7 +39,7 @@ app.service('emailService', function($http){
 						}
 					],
 					'subject': 'Piano Service Request Confirmation',
-					'html': '<p>Hello ' + newLead.firstName + '! </p> <br> <p> - Thank you for your trust in us to find the perfect technian for you Piano.  Your request generated an email to all of our technicians that have indicated they service your area and are capable of doing the work you have requested.</p> <p>You can expect to hear from a technician within 24 business hours.</p> <br> <p><strong> - Tune My Piano</strong></p>'
+					'html': '<p>Hello ' + newLead.firstName + '! </p> <br> <p> - Thank you for your trust in us to find the perfect technician for you Piano.  Your request generated an email to all of our technicians that have indicated they service your area and are capable of doing the work you have requested.</p> <p>You can expect to hear from a technician within 24 business hours.</p> <br> <p><strong> - Tune My Piano</strong></p>'
 				}
 			}
 		});
@@ -61,7 +61,7 @@ app.service('emailService', function($http){
 						}],
 					'subject': 'New Technician Confirmation',
 					// 'html': "Testing"
-					'html': '<p>Hello ' + newTechnician.firstName + ", </p> <br> <p> - Thank you for your trust in us to help generate leads for you.  You will receive emails from us when a lead is generated that matches the counties you service and the types of services you offer.</p> <p>If you have any questions, please feel free to us our contact us page to reach us directly. </p> <br> <p><strong>Tune My Piano</strong></p>"
+					'html': '<p>Hello ' + newTechnician.firstName + ", </p> <br> <p> - Thank you for your trust in us to help generate leads for you.  You will receive emails from us when a lead is generated that matches the counties you service and the types of services you offer.</p> <p>If you have any questions, please feel free to use our contact us page to reach us directly. </p> <br> <p><strong>Tune My Piano</strong></p>"
 				}
 			}
 		});

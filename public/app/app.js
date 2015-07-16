@@ -33,6 +33,7 @@ app.config(function($routeProvider){
 					mainService.readLead().then(function(response){
 					messages = response.data;
 					deferred.resolve(messages);
+			// TODO: use http endpoint /user/is_tech to restrict access
 				});
 				return deferred.promise;
 			}

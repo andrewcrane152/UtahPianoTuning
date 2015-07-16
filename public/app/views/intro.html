@@ -1,3 +1,27 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">x</button>
+				<h3>Technician Login</h3>
+			</div>
+			<div class="modal-body">
+				<form method="post" action='' name="login_form">
+					<p><input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+					<p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+					<p><button type="submit" class="btn btn-primary">Sign in</button>
+						<a href="#">Forgot Password?</a>
+					</p>
+				</form>
+			</div>
+			<div class="modal-footer">
+				New To Tune My Piano?
+				<a href="#register" class="btn btn-primary">Register</a>
+		 </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 <div class="brand">Tune My Piano</div>
 <div class="address-bar">Pairing your Piano with the perfect Technician</div>
@@ -19,7 +43,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#intro">Home</a></li>
 				<li><a href="#request">Request a Technician</a></li>
-				<li><a href="#register">Technician Sign-In</a></li>
+				<li><a data-toggle="modal" data-target="#myModal">Technician Sign-In</a></li>
 				<li><a href="#contact">Contact Us</a></li>
 			</ul>
 		</div> <!-- /.navbar-collapse -->
@@ -86,11 +110,11 @@
                 <hr class="visible-xs">
                 <p class="text-center">This site is designed to help you, the <em>Piano Owner</em>, get lined up with the right <em>Piano Technician</em></p>
 								<br>
-                <p class="text-center">...and to help you know <a href="#/request">what to expect</a> when they arrive.</p>
+                <p class="text-center">...and to help you know <a href="#request">what to expect</a> when they arrive.</p>
 								<br>
 								<div class="text-center">
 										<input type="hidden" name="save" value="contact">
-										<button type="submit" class="btn btn-default" ng-click="#/request">REQUEST A TECHNICIAN</button>
+										<a href="#request"><button type="submit" class="btn btn-default">REQUEST A TECHNICIAN</button></a>
 								</div>
             </div>
         </div>

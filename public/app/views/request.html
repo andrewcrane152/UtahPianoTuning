@@ -18,8 +18,6 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="#intro">Home</a></li>
-				<li><a href="#request">Request a Technician</a></li>
-				<li><a href="#register">Technician Sign-In</a></li>
 				<li><a href="#contact">Contact Us</a></li>
 			</ul>
 		</div> <!-- /.navbar-collapse -->
@@ -74,7 +72,19 @@
 													</div>
 													<div class="form-group col-lg-2">
 															<label>County</label>
-															<input type="text" class="form-control" ng-model="newLead.county">
+															<select class="form-control" ng-model="newLead.county">
+																<option value="" disabled selected>Select</option>
+																<option>Box Elder</option>
+																<option>Cache</option>
+																<option>Davis</option>
+																<option>Juab</option>
+																<option>Morgan</option>
+																<option>Salt Lake</option>
+																<option>Tooele</option>
+																<option>Utah</option>
+																<option>Weber</option>
+																<option>Other</option>
+															</select>
 													</div>
 													<div class="form-group col-lg-2">
 															<label>State</label>

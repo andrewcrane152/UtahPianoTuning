@@ -1,30 +1,23 @@
-var LeadModel = require('../models/leadsSchema');
+var LeadModel = require('../models/leadsModel');
 
 module.exports = {
 	createLead: function(req, res){
 		console.log(req.body.lead);
 		newLead = new LeadModel(req.body.lead);
-		newLead.save(function(err, result){ //savedLead
-		// leadCounty = "cnty" + savedLead.county;
-		  console.log(err);
-			console.log(result);
-			if(err){
-				return res.status(500).json(err);
-			} else {
-				return res.json(result);
-			}
+		newLead.save(function(err, savedLead) {
+		leadCounty = savedLead.county;
+			if(err) res.status(500).json(err);
+			else {
+				cntyObj = {};
+				cntyObj[leadCounty] = true;
+				Technician
+				.find({ $push: cntyObj })
+				.exec(function(err, matchingTechArray) {
+					if(err) res.status(500).json(err);
+					res.json(matchingTechArray);
+				});
+		  }
 		});
-			// if(err) res.status(500).json(err);
-			// else Technician
-			// 	.find({})
-			// 	.exec(function(err, allTechsArray) {
-			// 		if(err) res.status(500).json(err);
-			// 		matchedTechs = allTechsArray.map(function(tech) {
-			// 			if (tech[leadCounty]) return tech;
-			// 		});
-			// 		res.json(matchedTechs);
-			// 	});
-		  // });
 	},
 
 	readLead: function(req, res){

@@ -1,4 +1,4 @@
-var TechniciansModel = require('../models/techniciansSchema');
+var TechniciansModel = require('../models/techniciansModel');
 
 module.exports = {
 	createTechnician: function(req, res) {
