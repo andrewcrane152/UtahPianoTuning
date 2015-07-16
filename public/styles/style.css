@@ -26,6 +26,10 @@ hr {
     border-color: #999999 !important;
 }
 
+label {
+    font-size: 1.15em;
+}
+
 #claim {
     font-size: 1em;
     line-height: 1.1;

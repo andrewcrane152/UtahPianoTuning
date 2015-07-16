@@ -1,4 +1,4 @@
-angular.module('tuneMyPiano')
+angular.module('tuneMyPiano');
 app.service('mainService', function($http){
 	this.createLead = function(newLead){
 		console.log("request service", newLead);

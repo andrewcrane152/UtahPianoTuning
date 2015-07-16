@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var TechniciansSchema = new mongoose.Schema({
-	user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
+	user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 	pianoKindGrand: {type: Boolean},
 	pianoKindConsole: {type: Boolean},
 	pianoKindSpinet: {type: Boolean},
@@ -25,7 +25,7 @@ var TechniciansSchema = new mongoose.Schema({
 	tooele: {type: Boolean},
 	utah: {type: Boolean},
 	weber: {type: Boolean},
-	other: {type: Boolean},
+	other_cnty: {type: Boolean},
 	submittedAt: { type: Date, default: Date.now}
 });
 

@@ -1,4 +1,5 @@
 var LeadModel = require('../models/leadsModel');
+var Technician = require('../models/techniciansModel');
 
 module.exports = {
 	createLead: function(req, res){
@@ -6,12 +7,15 @@ module.exports = {
 		newLead = new LeadModel(req.body.lead);
 		newLead.save(function(err, savedLead) {
 		leadCounty = savedLead.county;
+		leadCounty = leadCounty.toLowerCase();
 			if(err) res.status(500).json(err);
 			else {
-				cntyObj = {};
-				cntyObj[leadCounty] = true;
+				query = {};
+				query[leadCounty] = true;
+				console.log('query: ', query);
 				Technician
-				.find({ $push: cntyObj })
+				.find(query)
+				.populate('user_id')
 				.exec(function(err, matchingTechArray) {
 					if(err) res.status(500).json(err);
 					res.json(matchingTechArray);

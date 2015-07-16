@@ -4,7 +4,7 @@ var mandrill = require('mandrill-api/mandrill'),
 
 	module.exports.sendEmail = function(data){
 	var deferred = Q.defer();
-	var data = data.body; //TEMPORARY, FOR TESTING
+	//var data = data.body; //TEMPORARY, FOR TESTING
 	var message = {
 		"text": data.body,
 		"subject": data.subject,

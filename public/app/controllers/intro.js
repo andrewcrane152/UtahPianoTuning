@@ -2,8 +2,10 @@ angular.module('tuneMyPiano')
 .controller('introCtrl', function($scope, $location){
 
 $scope.goToTheRegisterPageRightNow = function(){
-  console.log($location.path());
-  $location.path("#/register");
+  $location.path("#register");
+  $('#myModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
 };
 
 });

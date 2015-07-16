@@ -1,5 +1,3 @@
-('use strict');
-
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
@@ -36,7 +34,7 @@ app.use(cors());
 // AUTHENTICATION //
 app.use(bodyParser.json());
 app.use(session({
-  secret: 'gweriwrb-erfawrg45-oasWsd',
+  secret: 'dallins-head-is-fatter-than-mine',
   saveUninitialized: true,
   resave: true
 }));

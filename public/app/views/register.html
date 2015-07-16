@@ -34,11 +34,8 @@
               </h2>
               <hr>
 							<p class="text-center">
-                  Filling out this form will register you as a technician with <em>Tune My Piano</em>.
+                  Filling out this form will register you as a Technician with <em>Tune My Piano</em>.
               </p>
-							<p class="text-center">
-									Indicating the services you perform and what counties you service will generate automated emails each time a new service request is created that matches your criteria.
-							</p>
           </div>
         </div>
       </div>
@@ -46,51 +43,59 @@
           <div class="box">
               <div class="col-lg-12">
                   <form role="form">
-	                  <hr>
+										<hr>
 	                  <h2 class="intro-text text-center">
-	                      <strong>Your Contact Information</strong>
+	                      <strong>Login Information</strong>
+	                  </h2>
+	                  <hr>
+										<div class="form-group col-lg-12 text-center">
+												<label>After submitting this form you will use this email and password for logging in.</label>
+										</div>
+										<div class="form-group col-lg-6">
+												<label>Email Address</label>
+												<input type="email" class="form-control" ng-model="newTechnicianPerson.email">
+										</div>
+										<div class="form-group col-lg-6">
+												<label>Login Password</label>
+												<input type="password" class="form-control" ng-model="newTechnicianPerson.password">
+										</div>
+										<div class="clearfix"></div>
+										<hr>
+	                  <h2 class="intro-text text-center">
+	                      <strong>Contact Information</strong>
 	                  </h2>
 	                  <hr>
 	                  <div class="row">
-                          <div class="form-group col-lg-6">
+                          <div class="form-group col-lg-4">
                               <label>First Name</label>
-                              <input type="text" class="form-control" ng-model="newTechnician.firstName">
+                              <input type="text" class="form-control" ng-model="newTechnicianPerson.firstName">
                           </div>
-													<div class="form-group col-lg-6">
-                              <label>Last Name</label>
-                              <input type="text" class="form-control" ng-model="newTechnician.lastName">
-                          </div>
-													<div class="clearfix"></div>
 													<div class="form-group col-lg-4">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" ng-model="newTechnicianPerson.lastName">
+                          </div>
+													<div class="form-group col-lg-4">
+                              <label>Phone Number</label>
+                              <input type="tel" class="form-control" ng-model="newTechnicianPerson.phone">
+                          </div>
+													<div class="clearfix"></div>
+													<div class="form-group col-lg-3">
 															<label>Address</label>
-															<input type="text" class="form-control" ng-model="newTechnician.address">
+															<input type="text" class="form-control" ng-model="newTechnicianPerson.address">
 													</div>
-													<div class="form-group col-lg-2">
+													<div class="form-group col-lg-3">
 															<label>City</label>
-															<input type="text" class="form-control" ng-model="newTechnician.city">
+															<input type="text" class="form-control" ng-model="newTechnicianPerson.city">
 													</div>
-													<div class="form-group col-lg-2">
-															<label>County</label>
-															<input type="text" class="form-control" ng-model="newTechnician.county">
-													</div>
-													<div class="form-group col-lg-2">
+													<div class="form-group col-lg-3">
 															<label>State</label>
-															<input type="text" class="form-control" ng-model="newTechnician.state">
+															<input type="text" class="form-control" ng-model="newTechnicianPerson.state">
 													</div>
-													<div class="form-group col-lg-2">
+													<div class="form-group col-lg-3">
 															<label>Zip</label>
-															<input type="text" class="form-control" ng-model="newTechnician.zip">
+															<input type="text" class="form-control" ng-model="newTechnicianPerson.zip">
 													</div>
 													<div class="clearfix"></div>
-													<div class="form-group col-lg-6">
-                              <label>Phone Number</label>
-                              <input type="tel" class="form-control" ng-model="newTechnician.phone">
-                          </div>
-                          <div class="form-group col-lg-6">
-                              <label>Email Address</label>
-                              <input type="email" class="form-control" ng-model="newTechnician.email">
-                          </div>
-                          <div class="clearfix"></div>
 													<hr>
 				                  <h2 class="intro-text text-center">
 				                      <strong>The Work You Do</strong>
@@ -99,46 +104,49 @@
 													<div class="form-group col-lg-12 text-center">
 															<label>What Services do you Offer?</label>
 													</div>
+													<div class="form-group col-lg-12 text-center">
+															<label ng-click="toggle()"><u>Click here for a descripton of the services</u></label>
+															<services-description services-description="isVisible"></services-description>
+													</div>
 													<div class="clearfix"></div>
-													<!-- <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label> -->
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.tuning">Tuning
+																<input type="checkbox" class="" ng-model="newTechnicianServices.tuning">Tuning
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.pitchRaise">Pitch Raise
+																<input type="checkbox" class="" ng-model="newTechnicianServices.pitchRaise">Pitch Raise
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.repairs">Repairs
+																<input type="checkbox" class="" ng-model="newTechnicianServices.repairs">Repairs
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.internalCleaning">Internal Cleaning
+																<input type="checkbox" class="" ng-model="newTechnicianServices.internalCleaning">Internal Cleaning
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.regulation">Regulation
+															<input type="checkbox" class="" ng-model="newTechnicianServices.regulation">Regulation
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.purchaseConsult">Purchase Consult
+															<input type="checkbox" class="" ng-model="newTechnicianServices.purchaseConsult">Purchase Consult
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.estimate">Estimate
+															<input type="checkbox" class="" ng-model="newTechnicianServices.estimate">Estimate
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.appraisal">Appraisal
+															<input type="checkbox" class="" ng-model="newTechnicianServices.appraisal">Appraisal
 														</label>
 													</div>
 													<div class="clearfix"></div>
@@ -150,59 +158,63 @@
 
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.box_elder">Box Elder
+																<input type="checkbox" class="" ng-model="newTechnicianServices.box_elder">Box Elder
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.cache">Cache
+																<input type="checkbox" class="" ng-model="newTechnicianServices.cache">Cache
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.davis">Davis
+																<input type="checkbox" class="" ng-model="newTechnicianServices.davis">Davis
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 															<label class="checkbox-inline">
-																<input type="checkbox" class="" ng-model="newTechnician.juab">Juab
+																<input type="checkbox" class="" ng-model="newTechnicianServices.juab">Juab
 															</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.morgan">Morgan
+															<input type="checkbox" class="" ng-model="newTechnicianServices.morgan">Morgan
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.salt_lake">Salt Lake
+															<input type="checkbox" class="" ng-model="newTechnicianServices.salt_lake">Salt Lake
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.tooele">Tooele
+															<input type="checkbox" class="" ng-model="newTechnicianServices.tooele">Tooele
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.utah">Utah
+															<input type="checkbox" class="" ng-model="newTechnicianServices.utah">Utah
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.weber">Weber
+															<input type="checkbox" class="" ng-model="newTechnicianServices.weber">Weber
 														</label>
 													</div>
 													<div class="form-group col-lg-3">
 														<label class="checkbox-inline">
-															<input type="checkbox" class="" ng-model="newTechnician.other">Other
+															<input type="checkbox" class="" ng-model="newTechnicianServices.other_cnty">Other
 														</label>
 													</div>
 													<div class="clearfix"></div>
-
+													<br>
+													<div class="form-group col-lg-12 text-center">
+															<label>Indicating the services you perform and what counties you service will generate automated emails each time a new lead is created that matches your criteria.</label>
+													</div>
+													<div class="clearfix"></div>
                           <div class="form-group col-lg-12 text-center">
                               <input type="hidden" name="save" value="contact">
-                              <button type="submit" class="btn btn-default" ng-click="createTechnician(newTechnician); sendTechnicianConfirmEmail(newTechnician)" placeholder="Submit Request">Submit</button>
+                              <button type="submit" class="btn btn-lg btn-default" ng-click="createTechnician(newTechnicianPerson, newTechnicianServices); sendTechnicianConfirmEmail(newTechnician)">Register</button>
                           </div>
                       </div>
                   </form>

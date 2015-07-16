@@ -9,6 +9,7 @@ var User = new mongoose.Schema({
   lastName: {type: String},
   address: {type: String},
   city: {type: String},
+  county: { type: String },
   state: {type: String},
   zip: {type: Number},
   phone: {type: String}
