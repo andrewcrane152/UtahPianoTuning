@@ -1,3 +1,16 @@
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center">
+			<br>
+      <p>Thank you for registering with us!</p>
+			<p>You will be recieving a confirmation email shortly.</p>
+			<br>
+			<p>You are now able to log in on the <a href="#intro" ng-click="goToTheIntroPageRightNow()">Home Page</a></p>.
+			<br>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 <div class="brand">Tune My Piano</div>
 <div class="address-bar">Pairing Technicians with the perfect Piano</div>
@@ -102,7 +115,7 @@
 				                  </h2>
 				                  <hr>
 													<div class="form-group col-lg-12 text-center">
-															<label>What Services do you Offer?</label>
+															<label>What services do you offer?</label>
 													</div>
 													<div class="form-group col-lg-12 text-center">
 															<label ng-click="toggle()"><u>Click here for a descripton of the services</u></label>
@@ -152,7 +165,7 @@
 													<div class="clearfix"></div>
 
                           <div class="form-group col-lg-12 text-center">
-                              <label>What Counties do you Service?</label>
+                              <label>What counties do you service?</label>
                           </div>
                           <div class="clearfix"></div>
 
@@ -214,7 +227,7 @@
 													<div class="clearfix"></div>
                           <div class="form-group col-lg-12 text-center">
                               <input type="hidden" name="save" value="contact">
-                              <button type="submit" class="btn btn-lg btn-default" ng-click="createTechnician(newTechnicianPerson, newTechnicianServices); sendTechnicianConfirmEmail(newTechnician)">Register</button>
+                              <button type="submit" class="btn btn-lg btn-default" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="createTechnician(newTechnicianPerson, newTechnicianServices); sendTechnicianConfirmEmail(newTechnicianPerson)">Register</button>
                           </div>
                       </div>
                   </form>

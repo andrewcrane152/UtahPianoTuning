@@ -1,5 +1,5 @@
 angular.module('tuneMyPiano')
-.controller("registerCtrl", function($scope, mainService, emailService){
+.controller("registerCtrl", function($scope, mainService, emailService, $location){
 
 	$scope.createTechnician = function(newTechnicianPerson, newTechnicianServices) {
 		newTechnician = {
@@ -14,7 +14,7 @@ angular.module('tuneMyPiano')
 		});
 	};
 
-	$scope.sendTechnicianConfirmEmail = function(newTechnicianPerson, newTechnicainServices) {
+	$scope.sendTechnicianConfirmEmail = function(newTechnicianPerson, newTechnicianServices) {
 		newTechnician = {
 			newTechnicianPerson: newTechnicianPerson,
 			newTechnicianServices: newTechnicianServices
@@ -23,7 +23,7 @@ angular.module('tuneMyPiano')
 			$scope.newTechnicianPerson.email = '';
 			$scope.newTechnicianPerson.firstName = '';
 			$scope.newTechnicianPerson.lastName = '';
-			$scope.newTechnicainServices = '';
+			$scope.newTechnicianServices = '';
 			alert('We have just sent you a confirmation email.  Thank you for your support!');
 			});
 	};
@@ -32,5 +32,12 @@ angular.module('tuneMyPiano')
 		$scope.isVisible = !$scope.isVisible;
 	};
 	$scope.isVisible = false;
+
+	$scope.goToTheIntroPageRightNow = function(){
+	  $location.path("#intro");
+	  $('#myModal').modal('hide');
+	  $('body').removeClass('modal-open');
+	  $('.modal-backdrop').remove();
+	};
 
 });

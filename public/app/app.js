@@ -1,6 +1,6 @@
 var app = angular.module('tuneMyPiano', ['ngRoute', 'ngAnimate']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, $httpProvider){
 	console.log('app loaded');
 	$routeProvider
 	.when('/intro', {
@@ -33,8 +33,6 @@ app.config(function($routeProvider){
 					mainService.readLead().then(function(response){
 					messages = response.data;
 					deferred.resolve(messages);
-				
-			// TODO: use http endpoint /user/is_tech to restrict access
 				});
 				return deferred.promise;
 			}
@@ -48,6 +46,17 @@ app.config(function($routeProvider){
 
 	.otherwise({
 		redirectTo: '/intro'
-	})
+	});
 
-})
+	$httpProvider.interceptors.push(function($location) {
+		return {
+			'responseError': function(res) {
+				if (res.status === 401) {
+					$location.path('/intro');
+				}
+				return res;
+			}
+		};
+	});
+
+});

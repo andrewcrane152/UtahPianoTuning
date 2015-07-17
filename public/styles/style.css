@@ -6,6 +6,7 @@ body {
     background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
+    padding-right: 0px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -206,4 +207,25 @@ footer p {
         display: table;
         clear: both;
     }
+}
+
+
+.googleMap {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.carouselLinks1 {
+    text-decoration: underline;
+    color: white;
+}
+
+.carouselLinks2 {
+    text-decoration: underline;
+    color: black;
+}
+
+.carouselLinks3 {
+    text-decoration: underline;
+    color: black;
 }

@@ -1,18 +1,6 @@
-var app = angular.module('tuneMyPiano');
+var app = angular.module('tuneMyPiano')
 
-// app.directive('introHeader', function(){
-//   return {
-//     restrict: 'E',
-//     templateUrl: "mainHeader.html",
-//     transclude: true,
-//     link: function(scope, element, attrs){
-//
-//     }
-//   }
-// })
-
-
-app.directive('servicesDescription', function(){
+.directive('servicesDescription', function(){
     function link( $scope, element, attributes) {
       console.log('inside the function');
       var expression = attributes.servicesDescription;

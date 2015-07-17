@@ -1,5 +1,5 @@
 angular.module('tuneMyPiano')
-app.controller("AppController", function( $scope, modals ) {
+.controller("AppController", function( $scope, modals ) {
   $scope.alertSomething = function() {
       var promise = modals.open(
           "alert",

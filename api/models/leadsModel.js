@@ -22,8 +22,7 @@ var LeadSchema = new mongoose.Schema({
 	purchaseConsult: { type: Boolean},
 	estimate: { type: Boolean},
 	appraisal: { type: Boolean},
-	other: { type: Boolean},
-	comment: { type: String},
+	message: { type: String, default: "no message"},
 	submittedAt: { type: Date, default: Date.now}
 });
 

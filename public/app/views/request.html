@@ -199,12 +199,11 @@
 													<div class="clearfix"></div>
                           <div class="form-group col-lg-12">
                               <label>Message</label>
-                              <textarea class="form-control" rows="6" ng-model="message" placeholder="Indicate any questions, specific repair requests, best time to contact, etc."></textarea>
+                              <textarea class="form-control" rows="6" ng-model="newLead.message" placeholder="Indicate any questions, specific repair requests, best time to contact, etc."></textarea>
                           </div>
                           <div class="form-group col-lg-12 text-center">
                               <input type="hidden" name="save" value="contact">
                               <button type="submit" class="btn btn-default" ng-click="createLead(newLead); sendLeadConfirmEmail(newLead)">Submit Request</button>
-															<!-- // ; sendEmail(newLead.email, newLead.firstName, utahpianotuning@gmail.com, "New Lead Created", ) -->
                           </div>
                       </div>
                   </form>
