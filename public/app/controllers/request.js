@@ -22,7 +22,6 @@ angular.module('tuneMyPiano')
 			$scope.newLead.email = '';
 			$scope.newLead.firstName = '';
 			$scope.newLead.lastName = '';
-			alert('We have just sent you a confirmation email.  Thank you for your request!');
 			});
 	};
 

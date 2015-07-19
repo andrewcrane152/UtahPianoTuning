@@ -215,17 +215,15 @@ footer p {
     padding-bottom: 15px;
 }
 
-.carouselLinks1 {
-    text-decoration: underline;
-    color: white;
-}
-
-.carouselLinks2 {
-    text-decoration: underline;
+.carouselLinks {
+    text-decoration: underline bold;
     color: black;
 }
 
-.carouselLinks3 {
-    text-decoration: underline;
-    color: black;
+.boxCarousel {
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  background: #fff;
+  background: rgba(255,255,255,.8);
+  border-radius: 3px;
 }

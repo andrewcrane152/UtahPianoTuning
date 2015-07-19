@@ -65,6 +65,20 @@ app.get('/api/leads', isAuthed, leadsCtrl.readLead);
 // CREATE NEW TECHNICIAN //
 app.post('/api/technicians', techniciansCtrl.createTechnician);
 
+// TESTING CART ON SESSION //
+
+function cart(req, res, next){
+	if(!req.session.cart){
+		req.session.cart = [];
+		next();
+	}
+	next();
+}
+
+app.post('/api/cart/', cart, CartCtrl.addProduct);
+app.get('/api/cart/', cart, CartCtrl.getCart);
+app.put('/api/cart/remove', cart, CartCtrl.deleteItem);
+app.put('/api/cart/', cart, CartCtrl.updateItem);
 
 // app.post('api/email/send', emailCtrl.sendEmail);
 

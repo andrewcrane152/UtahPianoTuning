@@ -6,8 +6,7 @@ angular.module('tuneMyPiano')
 			$scope.fromEmail = '';
 			$scope.fromName = '';
 			$scope.message = '';
-			alert('your message has been sent');
-		})
+		});
 	};
 
 

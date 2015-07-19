@@ -24,7 +24,6 @@ angular.module('tuneMyPiano')
 			$scope.newTechnicianPerson.firstName = '';
 			$scope.newTechnicianPerson.lastName = '';
 			$scope.newTechnicianServices = '';
-			alert('We have just sent you a confirmation email.  Thank you for your support!');
 			});
 	};
 

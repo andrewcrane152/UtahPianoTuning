@@ -34,26 +34,52 @@ app.directive('whatToExpect', function(){
 });
 
 
+app.directive('cart', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'app/directives/cart.html',
+		link: function(scope, element, attrs){
+			if(scope.cart){
+				scope.$watch('cart', function(){
+					var total = 0;
+					for(var i = 0; i < scope.cart.length; i++){
+						scope.cart[i].total = scope.cart[i].quantity * scope.cart[i].item.price;
+						total += scope.cart[i].total;
+						scope.total = total.toFixed(2);
+					}
+				});
+			}
+		},
+		controller: function($scope, cartService, $location, customerService){
+			$scope.updateItem = function(item, id, quantity){
+				console.log(22222222, item, id, quantity);
+				var data = {
+					id: id,
+					quantity: quantity
+				};
+				cartService.updateItem(data).then(function(response){
+					$scope.cart = response.data;
+				});
+			};
 
-// app.directive("bnModals", function( $rootScope, modals ) {
-//         return(link);
-//         function link( scope, element, attributes ) {
-//             scope.subview = null;
-//             element.on("click", function handleClickEvent( event ) {
-//                     if ( element[ 0 ] !== event.target ) {
-//                         return;
-//                     }
-//                     scope.$apply( modals.reject );
-//                 }
-//             );
-//             $rootScope.$on("modals.open", function handleModalOpenEvent(event, modalType) {
-//                     scope.subview = modalType;
-//                 }
-//             );
-//             $rootScope.$on("modals.close", function handleModalCloseEvent(event) {
-//                     scope.subview = null;
-//                 }
-//             );
-//         }
-//     }
-// );
+			$scope.removeItem = function(item, id){
+				console.log(3333333, item,444444, id);
+				cartService.removeItem(id).then(function(response){
+					$scope.cart = response.data;
+				});
+			};
+
+			$scope.checkout = function(){
+				$location.path('/checkout/');
+			};
+
+			$scope.showCart = function(){
+				$scope.show = !$scope.show;
+			};
+			$scope.backToStore = function(){
+				$scope.show = !$scope.show;
+				$location.path('/store/');
+			};
+		}
+	};
+});
