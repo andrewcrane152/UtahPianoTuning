@@ -1,5 +1,6 @@
-var User = require('../models/UserModel.js');
-var Leads = require('../models/LeadsModel.js');
+var LeadModel = require('../models/leadsModel');
+var Technician = require('../models/techniciansModel');
+var User = require('../models/UserModel');
 
 module.exports = {
 

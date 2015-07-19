@@ -1,5 +1,6 @@
 var LeadModel = require('../models/leadsModel');
 var Technician = require('../models/techniciansModel');
+var User = require('../models/UserModel');
 
 module.exports = {
 	createLead: function(req, res){
