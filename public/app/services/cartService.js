@@ -1,10 +1,10 @@
 app.service('cartService', function($http, $q){
 
-	this.addToCart = function(data){
+	this.addToCart = function(message){
 		return $http({
 			method: 'POST',
 			url: 'http://localhost:9999/api/cart/',
-			data: data
+			message: message
 		});
 	};
 
@@ -15,11 +15,11 @@ app.service('cartService', function($http, $q){
 		});
 	};
 
-	this.updateItem = function(data){
+	this.updateItem = function(message){
 		return $http({
 			method: 'PUT',
 			url: 'http://localhost:9999/api/cart',
-			data: data
+			message: message
 		});
 	};
 
@@ -27,12 +27,10 @@ app.service('cartService', function($http, $q){
 		return $http({
 			method: 'PUT',
 			url: 'http://localhost:9999/api/cart/remove',
-			data: {
-				id: id
-			}
+			message: message
 		});
 	};
 
-  
+
 
 });

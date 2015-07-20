@@ -1,4 +1,51 @@
-<div class="pop-up-back valign-wrapper"  ng-show="show">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" ng-click="showCart()">x</button>
+				<h3>Your Cart</h3>
+			</div>
+			<div class="modal-body" ng-repeat="item in cart">
+				<form method="post" action='/login' name="login_form">
+					<p class>{{item.item.firstName}}\'s {{item.item.pianoBrand}} - {{item.item.pianoKind}} in {{item.item.city}}</p>
+					<p><button type="submit" class="btn btn-primary">Sign in</button>
+
+					</p>
+				</form>
+			</div>
+			<div class="modal-footer">
+				Purchase Leads:
+				<a href="#register" ng-click="goToTheRegisterPageRightNow()" class="btn btn-primary">Checkout</a>
+		 </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Purchase Leads</h4>
+          <div class="row text-right">All leads are $10</div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row" ng-repeat="item in cart">
+            <div class="col-xs-10 col-sm-8">{{item.item.firstName}}\'s {{item.item.pianoBrand}} - {{item.item.pianoKind}} in {{item.item.city}}</div>
+            <button type="button" ng-click="removeItem(item, item.item.id)" class="close col-xs-2 col-sm-4" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="backToStore()" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" ng-click="checkout()" class="btn btn-primary">Checkout</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- <div class="pop-up-back valign-wrapper"  ng-show="show">
 	<div class="pop-up center-align white">
 		<i id="closeCart" class="small material-icons blue-text" ng-click="showCart()">highlight_off</i>
 		<header><h4 class="black-text">cart items</h4></header>
@@ -31,4 +78,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

@@ -2,7 +2,6 @@ var app = angular.module('tuneMyPiano')
 
 .directive('servicesDescription', function(){
     function link( $scope, element, attributes) {
-      console.log('inside the function');
       var expression = attributes.servicesDescription;
       var duration = (attributes.slideShowDuration || "fast");
       if (!$scope.$eval(expression)){
@@ -43,7 +42,7 @@ app.directive('cart', function(){
 				scope.$watch('cart', function(){
 					var total = 0;
 					for(var i = 0; i < scope.cart.length; i++){
-						scope.cart[i].total = scope.cart[i].quantity * scope.cart[i].item.price;
+						scope.cart[i].total = scope.cart[i].quantity * 10;
 						total += scope.cart[i].total;
 						scope.total = total.toFixed(2);
 					}
