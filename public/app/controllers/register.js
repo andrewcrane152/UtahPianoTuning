@@ -38,5 +38,4 @@ angular.module('tuneMyPiano')
 	  $('body').removeClass('modal-open');
 	  $('.modal-backdrop').remove();
 	};
-
 });
