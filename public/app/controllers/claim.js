@@ -17,14 +17,14 @@ angular.module('tuneMyPiano')
 	};
 
 	$scope.updateItem = function(message){
-		console.log(22222222, item, id, quantity);
+		console.log("updateItem" + message);
 		cartService.updateItem(message).then(function(response){
 			$scope.cart = response.message;
 		});
 	};
 
-	$scope.removeItem = function(item, id){
-		console.log(3333333, item,444444, id);
+	$scope.removeItem = function(message){
+		console.log("removeItem" + message);
 		cartService.removeItem(id).then(function(response){
 			$scope.cart = response.message;
 		});
@@ -46,8 +46,7 @@ angular.module('tuneMyPiano')
 	$scope.addToCart = function(message){
 		cartService.addToCart(message).then(function(response){
 			$scope.cart = response.message;
-			$('#claimButton').prop('disabled', true);
-			//TODO CHECK TO SEE IF BUTTON IS DISABLED //
+			console.log(response.message);
 		});
 	};
 

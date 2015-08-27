@@ -9,7 +9,7 @@
       <div class="modal-body">
         <div class="container-fluid">
           <div class="row" ng-repeat="item in cart">
-            <p class="col-xs-10 col-sm-8">{{item.item.firstName}}\'s {{item.item.pianoBrand}} - {{item.item.pianoKind}} in {{item.item.city}}</p>
+            <p class="col-xs-10 col-sm-8">{{message.firstName}}\'s {{message.pianoBrand}} - {{message.pianoKind}} in {{message.city}}</p>
             <button type="button" ng-click="removeItem(item, item.item.id)" class="close col-xs-2 col-sm-4" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
         </div>
@@ -23,8 +23,8 @@
 </div><!-- /.modal -->
 
 <div class="container">
-<div class="brand">Tune My Piano</div>
-<div class="address-bar">Pairing Technicians with the perfect Piano</div>
+	<div class="brand">Tune My Piano</div>
+	<div class="address-bar">Pairing Technicians with the perfect Piano</div>
 </div> <!-- /.container -->
 
 <!-- NAVIGATION -->
@@ -61,13 +61,13 @@
 </div>
 		<div class="clearfix"></div>
 		<div class="box text-center col-lg-12">
-			<label>Search: <input ng-model="searchText" placeholder="Search Any Keyword"></label>
+			<label>Search: <input ng-model="searchText" placeholder="Search by Keyword"></label>
 		</div>
 
 <div class="container">
 		<div class="row">
 				<div class="col-lg-12 text-center">
-					<div class="" ng-repeat="message in messages | filter:searchText">
+					<div class="container" ng-repeat="message in messages | filter:searchText">
 						<div class="box">
 							<div class="col-lg-3 text-left">
 								<span>{{message.firstName}} - </span>

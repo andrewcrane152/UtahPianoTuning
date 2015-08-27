@@ -14,7 +14,7 @@ module.exports = {
 	},
 
 	updateItem: function(req, res){
-		console.log(33333, req.session.cart[0]);
+		console.log(req.session.cart[0]);
 		for(var i = 0; i < req.session.cart.length; i++){
 			if(req.session.cart[i].item.id === req.body.id){
 				req.session.cart[i].quantity = req.body.quantity;
