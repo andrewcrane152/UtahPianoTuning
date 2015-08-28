@@ -70,7 +70,7 @@
 					<div class="container" ng-repeat="message in messages | filter:searchText">
 						<div class="box">
 							<div class="col-lg-3 text-left">
-								<span>{{message.firstName}} - </span>
+								<span><strong>{{message.firstName}}</strong> - </span>
 								<span>{{message.city}},</span>
 								<span>{{message.county}} County,</span>
 								<span>{{message.state}}</span>
@@ -82,38 +82,46 @@
 								<p id="claim">Last Tuned: {{message.lastTuned}}</p>
 							</div>
 							<div class="col-lg-4 text-left">
-									<span ng-show="message.tuning">Tuning</span>
-									<span ng-show="message.pitchRaise">Pitch Raise</span>
-									<span ng-show="message.repairs">Repairs</span>
-									<span ng-show="message.internalCleaning">Internal Cleaning</span>
-									<span ng-show="message.regulation">Regulation</span>
-									<span ng-show="message.purchaseConsult">Purchase Consult</span>
-									<span ng-show="message.estimate">Estimate</span>
-									<span ng-show="message.appraisal">Appraisal</span>
-									<span ng-show="message.other">Other</span>
+									<p id="claim"><strong>Requested Services</strong></p>
+									<span ng-show="message.tuning">| Tuning |</span>
+									<span ng-show="message.pitchRaise">| Pitch Raise |</span>
+									<span ng-show="message.repairs">| Repairs |</span>
+									<span ng-show="message.internalCleaning">| Internal Cleaning |</span>
+									<span ng-show="message.regulation">| Regulation |</span>
+									<span ng-show="message.purchaseConsult">| Purchase Consult |</span>
+									<span ng-show="message.estimate">| Estimate |</span>
+									<span ng-show="message.appraisal">| Appraisal |</span>
+									<span ng-show="message.other">| Other |</span>
 							</div>
-							<div class="form-group col-lg-2 text-left">
+							<div class="form-group col-lg-2 text-right">
 									<input type="hidden" name="save" value="contact">
 									<button type="submit" id="claimButton" class="btn btn-default" ng-click="addToCart(message)" placeholder="Submit Request">Add to Cart</button>
 							</div>
-								<div class="col-lg-12 text-center">
-									<p id="claim" ng-show="message.message"><strong>Customer Comment: </strong>{{message.message}}</p>
-									<p id="claim" ng-show="message.submittedAt">Submitted on: <strong>{{message.submittedAt | date: 'fullDate'}}</strong></p>
-								</div>
+							<br>
+							<div class="clearfix"></div>
+							<br>
+							<div class="col-lg-12 text-center">
+								<p id="claim" ng-show="message.message"><strong>Customer Comment: </strong>{{message.message}}</p>
+								<p id="claim" ng-show="message.submittedAt">Submitted on: <strong>{{message.submittedAt | date: 'fullDate'}}</strong></p>
+							</div>
 							</div>
 					</div>
 				</div>
 		</div>
 </div>
 
-<div class="container">
+<div class="box">
+	<div class="container">
 		<div class="row">
-			<div class = "box">
-				<div class="col-lg-12 text-center googleMap">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6007.684324020701!2d-112.07317888005039!3d41.15979534125246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1436567593442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
+			<div class="col-lg-12 text-center">
+				<p>Locate Leads Here</p>
+				<p id="claim">All locations approximate<p>
+			</div>
+			<div class="col-lg-12 text-center googleMap">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6007.684324020701!2d-112.07317888005039!3d41.15979534125246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1436567593442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
+	</div>
 </div>
 
 <footer>
