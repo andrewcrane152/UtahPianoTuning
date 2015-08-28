@@ -44,6 +44,7 @@ angular.module('tuneMyPiano')
 	};
 
 	$scope.addToCart = function(message){
+		console.log("addToCart" + message);
 		cartService.addToCart(message).then(function(response){
 			$scope.cart = response.message;
 			console.log(response.message);

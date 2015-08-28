@@ -1,14 +1,13 @@
 var app = angular.module('tuneMyPiano', ['ngRoute', 'ngAnimate']);
 
 app.config(function($routeProvider, $httpProvider){
-	console.log('app loaded');
 	$routeProvider
 	.when('/intro', {
 		templateUrl: 'app/views/intro.html',
 		controller: 'introCtrl',
 		resolve: {
 			test: function(){
-				return console.log("hello?");
+				// return console.log("hello?");
 			}
 		}
 	})
@@ -29,7 +28,6 @@ app.config(function($routeProvider, $httpProvider){
 		resolve: {
 			getLeads: function($q, mainService){
 				var deferred = $q.defer();
-					console.log('resolve working');
 					mainService.readLead().then(function(response){
 					messages = response.data;
 					deferred.resolve(messages);
